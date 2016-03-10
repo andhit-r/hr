@@ -4,29 +4,13 @@
 
 {
     "name": "Experience Management",
-    "version": "8.0.0.1.0",
+    "version": "8.0.1.1.0",
     "author": "Savoir-faire Linux,Odoo Community Association (OCA)",
-    "maintainer": 'Savoir-faire Linux',
     "website": "http://www.savoirfairelinux.com",
     "license": "AGPL-3",
     "category": "Human Resources",
-    "description": """
-Experience Management
-=====================
-
-This module allows you to manage your employee experiences:
-    * Professional
-    * Academic
-    * Certification
-
-Contributors
-------------
-* El Hadji DEM (elhaji.dem@savoirfairelinux.com)
-""",
-
     "depends": ["hr", ],
-    'external_dependencies': {},
-    'data': [
+    "data": [
         "security/ir.model.access.csv",
         "security/hr_security.xml",
         "views/hr_employee_view.xml",
@@ -34,8 +18,5 @@ Contributors
         "views/hr_professional_view.xml",
         "views/hr_certification_view.xml",
     ],
-    "demo": [],
-    "test": [],
-    'installable': True
+    "installable": True
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
