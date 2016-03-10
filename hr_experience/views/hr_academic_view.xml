@@ -6,9 +6,11 @@
         <field name="model">hr.academic</field>
         <field name="arch" type="xml">
             <tree string="Academic experiences">
-                <field name="name"/>
+                <field name="name" string="Education"/>
                 <field name="employee_id"/>
-                <field name="partner_id"/>
+                <field name="partner_id" string="Institution"/>
+                <field name="diploma"/>
+                <field name="study_field"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
             </tree>
@@ -24,6 +26,7 @@
                     <group name="main">
                         <field name="employee_id"/>
                         <field name="name"/>
+                        <separator string="Dates" colspan="4"/>
                         <field name="start_date"/>
                         <field name="expire"/>
                         <field name="end_date" attrs="{'invisible':[('expire', '=', False)]}"/>

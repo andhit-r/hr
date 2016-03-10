@@ -7,9 +7,10 @@
         <field name="type">tree</field>
         <field name="arch" type="xml">
             <tree string="certifications">
-                <field name="name"/>
+                <field name="name" string="Certification"/>
                 <field name="employee_id"/>
-                <field name="partner_id"/>
+                <field name="certification" string="# Certificate"/>
+                <field name="partner_id" string="Issued By"/>
                 <field name="start_date"/>
                 <field name="end_date"/>
             </tree>
@@ -25,13 +26,13 @@
                 <sheet>
                     <group name="main">
                         <field name="employee_id"/>
-                        <field name="name"/>
+                        <field name="name" string="Certification"/>
                         <separator string="Dates" colspan="4"/>
                         <field name="start_date"/>
                         <field name="expire"/>
                         <field name="end_date" attrs="{'invisible':[('expire', '=', False)]}"/>
                         <separator string="Partner information" colspan="4"/>
-                        <field name="partner_id"/>
+                        <field name="partner_id" string="Issued By"/>
                         <field name="location"/>
                         <group colspan="4">
                             <separator string="Certification information" colspan="4"/>
