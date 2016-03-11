@@ -51,7 +51,7 @@ class TestAwardFlow(TransactionCase):
         self.user_hr_manager = self.env['res.users'].create(user3_data)
 
         self.award_type = self.env.ref(
-            'hr_employee_awards.award_type_eom')
+            'hr_employee_award.award_type_eom')
 
         return result
 
