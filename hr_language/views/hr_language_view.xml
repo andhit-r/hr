@@ -20,6 +20,7 @@
                             <field name="speak_rating"/>
                             <field name="listen_rating"/>
                             <field name="write_rating"/>
+                            <field name="description"/>
                         </tree>
                     </field>
                 </page>
@@ -35,9 +36,11 @@
         <field name="arch" type="xml">
             <tree string="Languages">
                 <field name="employee_id"/>
+                <field name="employee_id"/>
                 <field name="read_rating"/>
-                <field name="write_rating"/>
                 <field name="speak_rating"/>
+                <field name="listen_rating"/>
+                <field name="write_rating"/>
                 <field name="description"/>
             </tree>
         </field>
