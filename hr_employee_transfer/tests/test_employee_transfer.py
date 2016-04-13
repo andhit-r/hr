@@ -47,5 +47,5 @@ class TestEmployeeTransfer(common.TransactionCase):
 
     def test_transfer(self):
         self.assertTrue(self.transfer.dst_contract_id)
-        self.assertAssertIsNotNone(self.transfer.src_contract_id)
+        self.assertIsNotNone(self.transfer.src_contract_id)
         self.assertEqual(self.employee.job_id, self.job_2)
