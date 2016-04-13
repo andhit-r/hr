@@ -28,7 +28,7 @@ class TestEmployeeTransfer(common.TransactionCase):
             'date_start': '2010-10-01',
             'employee_id': self.employee.id,
             'wage': 1000,
-            'job_id': self.job_1.id,
+            'job_id': self.job.id,
         })
 
         # create transfer
@@ -47,5 +47,5 @@ class TestEmployeeTransfer(common.TransactionCase):
 
     def test_transfer(self):
         self.assertTrue(self.transfer.dst_contract_id)
-        self.assertEqual(self.transfer.src_contract_id)
+        self.assertAssertIsNotNone(self.transfer.src_contract_id)
         self.assertEqual(self.employee.job_id, self.job_2)

@@ -129,9 +129,9 @@ class HrDepartmentTransfer(models.Model):
                 employee.department_id.id or \
                 False
             self.src_id = employee.contract_id and \
-                (employee.contract_id.job_id and \
-                employee.contract_id_job_id.id or \
-                False) or False
+                (employee.contract_id.job_id and
+                 employee.contract_id_job_id.id or
+                 False) or False
             self.src_contract_id = employee.contract_id and \
                 self.employee_id.contract_id.id or False
 
@@ -192,7 +192,7 @@ class HrDepartmentTransfer(models.Model):
                     {'department_id': xfer.dst_department_id.id})
                 if xfer.src_contract_id:
                     xfer.transfer_contract(xfer.src_contract_id,
-                                        xfer.dst_id.id, xfer.date)
+                                           xfer.dst_id.id, xfer.date)
                 xfer.write({'state': 'done'})
             else:
                 return False
