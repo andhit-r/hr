@@ -12,7 +12,7 @@ class HrExpenseCase(TransactionCase):
         super(HrExpenseCase, self).setUp(*args, **kwargs)
 
         self.employee = self.env.ref("hr.employee")
-        self.obj_expense = self.env["hr.expense.expense"]
+        self.obj_expense = self.env["hr.expense"]
         self.obj_line = self.env["hr.expense.line"]
 
     def test_create_expense(self):

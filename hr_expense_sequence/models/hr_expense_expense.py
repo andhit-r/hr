@@ -6,7 +6,7 @@ from openerp import models, fields, api
 
 
 class HrExpense(models.Model):
-    _inherit = 'hr.expense.expense'
+    _inherit = 'hr.expense'
 
     number = fields.Char(required=True, default="/", readonly=True, copy=False)
 
