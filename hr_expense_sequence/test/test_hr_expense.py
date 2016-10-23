@@ -33,9 +33,9 @@ class HrExpenseCase(TransactionCase):
         self.assertNotEqual(
             expense.number,
             "/")
-        expense.signal_workflow("confirm")
-        expense.signal_workflow("validate")
-        expense.signal_workflow("done")
+        expense.submit_expenses()
+        expense.approve_expenses()
+        expense.action_move_create()
         self.assertEqual(
             expense.account_move_id.ref,
             expense.number)

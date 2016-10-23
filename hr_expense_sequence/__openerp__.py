@@ -16,6 +16,6 @@
         'data/hr_expense_data.xml',
         'views/hr_expense_expense_view.xml',
     ],
-    'installable': False,
+    'installable': True,
     "post_init_hook": "assign_old_sequences",
 }
