@@ -4,7 +4,7 @@
 
         <record id="view_expenses_tree_sequence" model="ir.ui.view">
             <field name="name">hr.expense.expense.tree.sequence</field>
-            <field name="model">hr.expense.expense</field>
+            <field name="model">hr.expense</field>
             <field name="inherit_id" ref="hr_expense.view_expenses_tree"/>
             <field name="arch" type="xml">
                 <field name="employee_id" position="before">
@@ -15,7 +15,7 @@
 
         <record id="view_expenses_form_sequence" model="ir.ui.view">
             <field name="name">hr.expense.form.sequence</field>
-            <field name="model">hr.expense.expense</field>
+            <field name="model">hr.expense</field>
             <field name="inherit_id" ref="hr_expense.hr_expense_form_view"/>
             <field name="arch" type="xml">
                 <xpath expr="//sheet/group" position="before">
@@ -29,7 +29,7 @@
 
         <record id="view_hr_expense_filter_sequence" model="ir.ui.view">
             <field name="name">hr.expense.expense.filter.sequence</field>
-            <field name="model">hr.expense.expense</field>
+            <field name="model">hr.expense</field>
             <field name="inherit_id" ref="hr_expense.view_hr_expense_filter"/>
             <field name="arch" type="xml">
                 <field name="name" position="attributes">
